@@ -9,9 +9,27 @@ export default {
 </script>
 
 <template>
-    
+    <main>
+        <section class="container">
+            <p>
+            --> Content goes here <--
+            </p>
+        </section>
+        
+    </main>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
+main {
+    background-color: black;
+    padding: 3rem 0;
+
+    p{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
 
 </style>
