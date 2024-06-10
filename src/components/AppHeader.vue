@@ -70,15 +70,17 @@ export default {
 </script>
 
 <template>
-    <header>
-        <section class="logo">
-            <img src="../img/dc-logo.png" alt="dc logo" class="main-logo">
+    <header class="container">
+        <section>
+            <img src="../img/dc-logo.png" alt="dc logo">
         </section>
         <section>
             <nav>
                 <ul>
                     <li v-for="link in headerLinks" :key="link.id" :class="(link.active) ? 'active' : ''">
-                        {{ link.title }}
+                        <a href="link.url">
+                            {{ link.title }}
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -86,6 +88,33 @@ export default {
     </header>
 </template>
 
-<style>
+<style lang="scss" scoped>
+    @use '../styles/partials/mixins' as *;
+    @use '../styles/partials/variables' as *;
+
+    header{
+        @include flex-between();
+        padding: 1rem 0;
+    }
+
+    ul{
+        @include flex-between();
+            
+            li{
+            font-size: .8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 1.3rem;
+
+                a {
+                    &active{
+                        color: $color-active-link;
+                    }
+                }
+            }
+    } 
+
+
+
 
 </style>
