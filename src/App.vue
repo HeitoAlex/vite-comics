@@ -1,10 +1,18 @@
 <script>
-export default{
-  data() {
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
 
+export default {
+  data() {
+    return{
+
+    }
   },
   components: {
-
+    AppHeader,
+    AppMain,
+    AppFooter
   }
 }
 </script>
@@ -14,7 +22,7 @@ export default{
 </template>
 
 <style lang="scss">
-  @use './styles/partials/mixins';
-  @use './styles/partials/variables';
+  @use './styles/partials/mixins' as *;
+  @use './styles/partials/variables' as *;
   @use './styles/general.scss';
 </style>
