@@ -103,8 +103,8 @@ export default {
             li{
             font-size: .8rem;
             font-weight: bold;
-            text-transform: uppercase;
             margin-right: 1.3rem;
+            @include uppercase-text;
 
                 a {
                     &active{
