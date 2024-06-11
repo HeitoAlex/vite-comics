@@ -1,8 +1,10 @@
 <script>
+import json from "../vue-dc-comics-2/dc-comics.json"
+
 export default {
     data() {
         return{
-
+            myJason: json
         }
     }
 }
@@ -11,12 +13,10 @@ export default {
 <template>
     <main>
         <section id="jumbotron">
-            <img src="../img/jumbotron.jpg" alt="">
+            
         </section>
         <section class="container">
-            <p>
-            --> Content goes here <--
-            </p>
+            <SingleCard v-for="(, price) in myJason[item]"/>
         </section>
     </main>
 </template>
@@ -25,20 +25,12 @@ export default {
     @use '../styles/partials/mixins' as *;
     @use '../styles/partials/variables' as *;
 
-    main {
-        background-color: black;
-        padding: 3rem 0;
-
-        p{
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-    }
+    
 
     section#jumbotron{
-        height: 200px;
+        background-image: url(../img/jumbotron.jpg);
+        height: 300px;
         background-size: cover;
-        
+
     }
 </style>
