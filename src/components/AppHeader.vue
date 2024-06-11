@@ -77,8 +77,8 @@ export default {
         <section>
             <nav>
                 <ul>
-                    <li v-for="link in headerLinks" :key="link.id" :class="(link.active) ? 'active' : ''">
-                        <a href="link.url">
+                    <li v-for="link in headerLinks" :key="link.id">
+                        <a href="link.url" :class="(link.active) ? 'active' : ''">
                             {{ link.title }}
                         </a>
                     </li>
@@ -107,7 +107,7 @@ export default {
             @include uppercase-text;
 
                 a {
-                    &active{
+                    &.active{
                         color: $color-active-link;
                     }
                 }

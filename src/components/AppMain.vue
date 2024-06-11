@@ -10,6 +10,9 @@ export default {
 
 <template>
     <main>
+        <section id="jumbotron">
+            <img src="../img/jumbotron.jpg" alt="">
+        </section>
         <section class="container">
             <p>
             --> Content goes here <--
@@ -31,5 +34,11 @@ export default {
             font-size: 1.5rem;
             font-weight: bold;
         }
+    }
+
+    section#jumbotron{
+        height: 200px;
+        background-size: cover;
+        
     }
 </style>
