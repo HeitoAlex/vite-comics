@@ -44,6 +44,7 @@ export default {
     footer{
         background-image: url(../img/footer-bg.jpg);
         height: 500px;
+        position: relative;
 
         section.container{
             @include flex-between();
@@ -51,8 +52,8 @@ export default {
     }
 
     div#bg-logo{
-        height: 450px;
-        width: 450px;
+        height: 500px;
+        width: 500px;
         background-image: url(../img/dc-logo-bg.png);
         background-size: cover;
         background-position: center;
@@ -63,6 +64,10 @@ export default {
         background-color: $bg-color-socials;
         padding: 1rem 0;
         @include uppercase-text();
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
     }
 
     button{
