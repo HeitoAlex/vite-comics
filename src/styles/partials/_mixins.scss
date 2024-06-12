@@ -14,3 +14,9 @@
 @mixin uppercase-text {
     text-transform: uppercase;
 }
+
+@mixin flex-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

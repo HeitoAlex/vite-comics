@@ -7,14 +7,23 @@ export default {
             
         }
     },
+
+    props: {
+        SingleComic: {
+            type: Object,
+            required: true
+        }
+    }
 }
 </script>
 
 <template>
     
         <article>
-            <img src="" alt="">
-            <p></p>
+            <img :src="item.thumb" :alt="item.series">
+            <h4>
+                {{ item.series }}
+            </h4>
         </article>
     
 </template>
@@ -23,5 +32,20 @@ export default {
     @use '../styles/partials/mixins' as *;
     @use '../styles/partials/variables' as *;
 
+    article{
+        width: calc((100% / 6) - .5rem);
+        padding: .5rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
 
+            img{
+                width: 100%;
+            }
+
+            h4{
+                @include uppercase-text();
+                color: white;
+                
+            }
+    }
 </style>
