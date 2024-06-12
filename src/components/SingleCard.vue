@@ -20,9 +20,9 @@ export default {
 <template>
     
         <article>
-            <img :src="item.thumb" :alt="item.series">
+            <img :src="SingleComic.thumb" :alt="SingleComic.series">
             <h4>
-                {{ item.series }}
+                {{ SingleComic.series }}
             </h4>
         </article>
     
@@ -34,12 +34,14 @@ export default {
 
     article{
         width: calc((100% / 6) - .5rem);
-        padding: .5rem;
+        padding: .5rem 3rem;
         margin-bottom: .5rem;
         margin-right: .5rem;
 
             img{
-                width: 100%;
+                width: 175px;
+                height: 230px;
+                margin-bottom: 1rem;
             }
 
             h4{
